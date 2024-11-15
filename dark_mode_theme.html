@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <style>
+        :root {
+            --color: #090909;
+            --bg-color: white;
+        }
+
+        body.dark-mode {
+            --color: white;
+            --bg-color: #090909;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+
+        }
+        
+        h3 {
+            color: var(--color);
+        }
+    </style>
+</head>
+<body>
+    <h3>Selamat datang di Alfamart
+        
+    </h3>
+    <button id="btn">clickme</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode')
+        })
+    </script>
+
+</body>
+</html>
